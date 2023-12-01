@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "day": "ts-node src/${0}.ts",
+    "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.1"
+  },
+  "dependencies": {
+    "prettier": "^3.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  },
+  "packageManager": "yarn@4.0.2",
+  "license": "ISC",
+  "engines": {
+    "node": ">18"
+  }
+}
