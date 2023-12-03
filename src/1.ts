@@ -1,5 +1,6 @@
 import { readInput, readExample } from '../utils/readInput';
 
+let start = Date.now();
 const input = readInput(1);
 
 const step1 = input
@@ -62,3 +63,6 @@ const step2 = input.split('\n').map(s => {
 	else return parseInt(`${a[0].value}${a[a.length - 1].value}`);
 }) as Array<number>;
 console.log(`Step 2 result is ${step2.reduce((partialSum, a) => partialSum + a, 0)}`);
+
+let timeTaken = Date.now() - start;
+console.log("Total time taken : " + timeTaken + " milliseconds");
