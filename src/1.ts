@@ -32,11 +32,11 @@ let arrayOfString = Object.keys(stringNumbers);
 let arrayofNumbers = Object.values(stringNumbers);
 
 const step2 = input.split('\n').map(s => {
-    //Create an array with all match and their index
+	//Create an array with all match and their index
 	let a: { value: number; index: number }[] = [];
 	let i = 0;
 
-    //For string numbers
+	//For string numbers
 	for (let strNum of arrayOfString) {
 		var reg = new RegExp(strNum, 'g');
 		let matches = [...s.matchAll(reg)];
@@ -47,17 +47,17 @@ const step2 = input.split('\n').map(s => {
 		i++;
 	}
 
-    //For number numbers
+	//For number numbers
 	for (let j = 0; j < s.length; j++) {
 		if (!isNaN(Number(s[j]))) {
 			a.push({ value: parseInt(s[j]), index: j });
 		}
 	}
 
-    //Sort by index
+	//Sort by index
 	a.sort((a, b) => a.index - b.index);
 
-    //Keep only the first and last
+	//Keep only the first and last
 	if (a.length === 0) return;
 	if (a.length === 1) return parseInt(`${a[0].value}${a[0].value}`);
 	else return parseInt(`${a[0].value}${a[a.length - 1].value}`);
@@ -65,4 +65,4 @@ const step2 = input.split('\n').map(s => {
 console.log(`Step 2 result is ${step2.reduce((partialSum, a) => partialSum + a, 0)}`);
 
 let timeTaken = Date.now() - start;
-console.log("Total time taken : " + timeTaken + " milliseconds");
+console.log('Total time taken : ' + timeTaken + ' milliseconds');
